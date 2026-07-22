@@ -13,6 +13,7 @@
                     colors: {
                         darkbg: '#0a0a0a',
                         cardbg: '#141414',
+                        brandorange: '#ff5500', // رنگ نارنجی اختصاصی مدرن
                     }
                 }
             }
@@ -23,21 +24,21 @@
         body { font-family: 'Vazirmatn', sans-serif; }
     </style>
 </head>
-<body class="bg-darkbg text-neutral-100 antialiased selection:bg-neutral-700 selection:text-white transition-colors duration-300">
+<body class="bg-darkbg text-neutral-100 antialiased selection:bg-brandorange selection:text-white transition-colors duration-300">
 
     <!-- هدر مینیمال به همراه دکمه همبرگری -->
-    <header class="fixed top-0 left-0 right-0 z-40 bg-darkbg/80 backdrop-blur-md border-b border-neutral-900">
+    <header class="fixed top-0 left-0 right-0 z-40 bg-darkbg/85 backdrop-blur-md border-b border-neutral-900">
         <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
-            <a href="#" class="text-xl font-black tracking-wider uppercase">Hadi Hourani</a>
+            <a href="#" class="text-xl font-black tracking-wider uppercase hover:text-brandorange transition-colors">Hadi Hourani</a>
             
             <div class="flex items-center gap-6">
                 <!-- دکمه تغییر زبان -->
-                <button onclick="toggleLang()" id="lang-btn" class="text-xs font-bold px-4 py-2 rounded-full border border-neutral-800 hover:border-neutral-500 transition">
+                <button onclick="toggleLang()" id="lang-btn" class="text-xs font-bold px-4 py-2 rounded-full border border-neutral-800 hover:border-brandorange hover:text-brandorange transition">
                     English
                 </button>
                 
                 <!-- دکمه منوی همبرگری (سه خط) -->
-                <button onclick="toggleMenu()" class="text-white hover:text-neutral-400 transition focus:outline-none">
+                <button onclick="toggleMenu()" class="text-white hover:text-brandorange transition focus:outline-none">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
                     </svg>
@@ -46,28 +47,28 @@
         </div>
     </header>
 
-    <!-- منوی تمام‌صفحه (دقیقاً مشابه عکس ارسالی) -->
-    <div id="fullscreen-menu" class="fixed inset-0 z-50 bg-[#111] opacity-0 pointer-events-none transition-opacity duration-500 flex flex-col justify-center px-6 md:px-24">
+    <!-- منوی تمام‌صفحه با قابلیت هاور نارنجی -->
+    <div id="fullscreen-menu" class="fixed inset-0 z-50 bg-[#0d0d0d] opacity-0 pointer-events-none transition-opacity duration-500 flex flex-col justify-center px-6 md:px-24">
         
         <!-- دکمه بستن منو (ضربدر) -->
-        <button onclick="toggleMenu()" class="absolute top-6 left-6 rtl:right-auto rtl:left-6 ltr:right-6 ltr:left-auto text-white hover:text-neutral-400 transition focus:outline-none">
+        <button onclick="toggleMenu()" class="absolute top-6 left-6 rtl:right-auto rtl:left-6 ltr:right-6 ltr:left-auto text-white hover:text-brandorange transition focus:outline-none">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
             </svg>
         </button>
 
-        <!-- لینک‌های منو با تایپوگرافی غول‌پیکر -->
+        <!-- لینک‌های منو با هاور نارنجی غول‌پیکر -->
         <nav class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-2 md:gap-y-4 text-5xl md:text-8xl font-black uppercase tracking-tighter leading-none">
-            <a href="#home" onclick="toggleMenu()" id="nav-home" class="hover:text-neutral-500 transition-colors">صفحه اصلی</a>
-            <a href="#casestudies" onclick="toggleMenu()" id="nav-cases" class="hover:text-neutral-500 transition-colors">مطالعات موردی</a>
+            <a href="#home" onclick="toggleMenu()" id="nav-home" class="hover:text-brandorange transition-colors duration-200">صفحه اصلی</a>
+            <a href="#casestudies" onclick="toggleMenu()" id="nav-cases" class="hover:text-brandorange transition-colors duration-200">مطالعات موردی</a>
             
-            <a href="#about" onclick="toggleMenu()" id="nav-about" class="hover:text-neutral-500 transition-colors">درباره من</a>
-            <a href="#resume" onclick="toggleMenu()" id="nav-resume" class="hover:text-neutral-500 transition-colors">رزومه</a>
+            <a href="#about" onclick="toggleMenu()" id="nav-about" class="hover:text-brandorange transition-colors duration-200">درباره من</a>
+            <a href="#resume" onclick="toggleMenu()" id="nav-resume" class="hover:text-brandorange transition-colors duration-200">رزومه</a>
             
-            <a href="#portfolio" onclick="toggleMenu()" id="nav-portfolio" class="hover:text-neutral-500 transition-colors">نمونه‌کارها</a>
-            <a href="#insights" onclick="toggleMenu()" id="nav-insights" class="hover:text-neutral-500 transition-colors">مقالات</a>
+            <a href="#portfolio" onclick="toggleMenu()" id="nav-portfolio" class="hover:text-brandorange transition-colors duration-200">نمونه‌کارها</a>
+            <a href="#insights" onclick="toggleMenu()" id="nav-insights" class="hover:text-brandorange transition-colors duration-200">مقالات</a>
             
-            <a href="#contact" onclick="toggleMenu()" id="nav-contact" class="hover:text-neutral-500 transition-colors">تماس</a>
+            <a href="#contact" onclick="toggleMenu()" id="nav-contact" class="hover:text-brandorange transition-colors duration-200">تماس</a>
         </nav>
     </div>
 
@@ -77,17 +78,17 @@
         <!-- ۱. صفحه اصلی (Home) -->
         <section id="home" class="min-h-screen flex flex-col justify-center items-start max-w-7xl mx-auto px-6 pt-32">
             <div class="space-y-6 max-w-4xl">
-                <span class="text-xs font-bold tracking-widest uppercase text-neutral-400 bg-neutral-900 px-3 py-1.5 rounded border border-neutral-800" id="hero-tag">
+                <span class="text-xs font-bold tracking-widest uppercase text-brandorange bg-brandorange/10 px-3.5 py-1.5 rounded-full border border-brandorange/20" id="hero-tag">
                     مدیریت و توسعه برند
                 </span>
-                <h1 class="text-5xl md:text-8xl font-black tracking-tighter leading-none" id="hero-title">
+                <h1 class="text-5xl md:text-8xl font-black tracking-tighter leading-none hover:text-brandorange transition-colors duration-300" id="hero-title">
                     آمبیژن و اصالت در مسیر توسعه.
                 </h1>
                 <p class="text-lg md:text-2xl text-neutral-400 font-light max-w-2xl leading-relaxed" id="hero-desc">
                     خلق ارزش، ارتباطات راهبردی و ساخت هویت متمایز سازمانی فراتر از استانداردهای معمولی.
                 </p>
                 <div class="pt-6 flex gap-4">
-                    <a href="#resume" class="px-8 py-4 bg-white text-darkbg font-bold rounded-full hover:bg-neutral-200 transition text-sm tracking-wide" id="cta-btn">
+                    <a href="#resume" class="px-8 py-4 bg-brandorange text-white font-bold rounded-full hover:bg-orange-600 transition text-sm tracking-wide shadow-lg shadow-brandorange/20" id="cta-btn">
                         دانلود رزومه
                     </a>
                 </div>
@@ -97,49 +98,45 @@
         <!-- ۲. درباره من (About) -->
         <section id="about" class="max-w-7xl mx-auto px-6 pt-20 border-t border-neutral-900">
             <div class="space-y-4 mb-12">
-                <h2 class="text-3xl md:text-5xl font-black tracking-tighter" id="sec-about-title">درباره من</h2>
+                <h2 class="text-3xl md:text-5xl font-black tracking-tighter hover:text-brandorange transition-colors duration-200" id="sec-about-title">درباره من</h2>
                 <p class="text-neutral-400 max-w-xl" id="sec-about-sub">معرفی، سوابق شغلی، تحصیلات، مهارت‌ها و افتخارات حرفه‌ای.</p>
             </div>
-            <!-- (محتوای درباره من - برای جلوگیری از شلوغی بیش از حد صفحه کوتاه شده است) -->
-            <div class="p-8 bg-cardbg rounded-2xl border border-neutral-800">
+            <div class="p-8 bg-cardbg rounded-2xl border border-neutral-800 hover:border-brandorange/50 transition-all duration-300">
                 <p class="text-neutral-300 leading-relaxed text-lg" id="ab-card1-d">سال‌ها تجربه در سطح مدیریتی و هدایت ارکان روابط عمومی و ارتباطات راهبردی. توسعه برند، مدیریت بحران، کمپین‌های رسانه‌ای و ارتباطات سازمانی.</p>
             </div>
         </section>
 
-        <!-- (سایر بخش‌ها پابرجا هستند. برای کوتاه شدن کد در اینجا خلاصه شده تا سریع‌تر روی گیت‌هاب اعمال کنید) -->
         <!-- ۷. تماس با من (Contact) -->
         <section id="contact" class="max-w-7xl mx-auto px-6 pt-20 border-t border-neutral-900">
             <div class="space-y-4 mb-12">
-                <h2 class="text-3xl md:text-5xl font-black tracking-tighter" id="sec-con-title">تماس با من</h2>
+                <h2 class="text-3xl md:text-5xl font-black tracking-tighter hover:text-brandorange transition-colors duration-200" id="sec-con-title">تماس با من</h2>
                 <p class="text-neutral-400 max-w-xl" id="sec-con-sub">اطلاعات تماس، فرم ارتباط و شبکه‌های اجتماعی.</p>
             </div>
             <div class="bg-cardbg p-8 rounded-2xl border border-neutral-800 space-y-4 max-w-2xl">
-                <input type="text" placeholder="نام شما" class="w-full bg-neutral-900 border border-neutral-800 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-neutral-500" id="form-name">
-                <input type="email" placeholder="ایمیل یا شماره تماس" class="w-full bg-neutral-900 border border-neutral-800 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-neutral-500" id="form-email">
-                <textarea placeholder="متن پیام..." rows="4" class="w-full bg-neutral-900 border border-neutral-800 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-neutral-500" id="form-msg"></textarea>
-                <button class="w-full py-3 bg-white text-darkbg font-bold rounded-xl hover:bg-neutral-200 transition text-sm" id="form-btn">ارسال پیام</button>
+                <input type="text" placeholder="نام شما" class="w-full bg-neutral-900 border border-neutral-800 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brandorange transition-colors" id="form-name">
+                <input type="email" placeholder="ایمیل یا شماره تماس" class="w-full bg-neutral-900 border border-neutral-800 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brandorange transition-colors" id="form-email">
+                <textarea placeholder="متن پیام..." rows="4" class="w-full bg-neutral-900 border border-neutral-800 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brandorange transition-colors" id="form-msg"></textarea>
+                <button class="w-full py-3 bg-brandorange text-white font-bold rounded-xl hover:bg-orange-600 transition text-sm shadow-lg shadow-brandorange/20" id="form-btn">ارسال پیام</button>
             </div>
         </section>
 
     </main>
 
-    <!-- اسکریپت‌ها (منو و تغییر زبان) -->
+    <!-- اسکریپت‌ها -->
     <script>
-        // تابع باز و بسته کردن منوی تمام‌صفحه
         function toggleMenu() {
             const menu = document.getElementById('fullscreen-menu');
             const body = document.body;
             
             if (menu.classList.contains('opacity-0')) {
                 menu.classList.remove('opacity-0', 'pointer-events-none');
-                body.classList.add('overflow-hidden'); // جلوگیری از اسکرول صفحه زیر منو
+                body.classList.add('overflow-hidden');
             } else {
                 menu.classList.add('opacity-0', 'pointer-events-none');
                 body.classList.remove('overflow-hidden');
             }
         }
 
-        // سیستم دوزبانه
         let currentLang = 'fa';
         const data = {
             fa: {
@@ -178,7 +175,6 @@
             document.getElementById('html-root').setAttribute('dir', d.dir);
             document.getElementById('page-title').innerText = d.title;
             
-            // آپدیت متن‌های منوی غول‌پیکر
             document.getElementById('nav-home').innerText = d.navHome;
             document.getElementById('nav-about').innerText = d.navAbout;
             document.getElementById('nav-portfolio').innerText = d.navPort;
@@ -187,7 +183,6 @@
             document.getElementById('nav-insights').innerText = d.navIns;
             document.getElementById('nav-contact').innerText = d.navCon;
 
-            // آپدیت سایر متون صفحه
             document.getElementById('hero-tag').innerText = d.tag;
             document.getElementById('hero-title').innerText = d.heroTitle;
             document.getElementById('hero-desc').innerText = d.heroDesc;
