@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id="page-title">هادی هورانی | روابط عمومی و توسعه برند</title>
+    <title id="page-title">سید هادی هورانی | روابط عمومی و توسعه برند</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -13,7 +13,7 @@
                     colors: {
                         darkbg: '#0a0a0a',
                         cardbg: '#141414',
-                        brandorange: '#ff5500', // رنگ نارنجی اختصاصی مدرن
+                        brandorange: '#ff5500',
                     }
                 }
             }
@@ -21,23 +21,20 @@
     </script>
     <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;900&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Vazirmatn', sans-serif; }
+        body { font-family: 'Vazirmatn', sans-serif; scroll-behavior: smooth; }
     </style>
 </head>
 <body class="bg-darkbg text-neutral-100 antialiased selection:bg-brandorange selection:text-white transition-colors duration-300">
 
-    <!-- هدر مینیمال به همراه دکمه همبرگری -->
+    <!-- هدر مینیمال -->
     <header class="fixed top-0 left-0 right-0 z-40 bg-darkbg/85 backdrop-blur-md border-b border-neutral-900">
         <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
-            <a href="#" class="text-xl font-black tracking-wider uppercase hover:text-brandorange transition-colors">Hadi Hourani</a>
+            <a href="#home" class="text-xl font-black tracking-wider uppercase hover:text-brandorange transition-colors">Hadi Hourani</a>
             
             <div class="flex items-center gap-6">
-                <!-- دکمه تغییر زبان -->
                 <button onclick="toggleLang()" id="lang-btn" class="text-xs font-bold px-4 py-2 rounded-full border border-neutral-800 hover:border-brandorange hover:text-brandorange transition">
                     English
                 </button>
-                
-                <!-- دکمه منوی همبرگری (سه خط) -->
                 <button onclick="toggleMenu()" class="text-white hover:text-brandorange transition focus:outline-none">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
@@ -47,87 +44,267 @@
         </div>
     </header>
 
-    <!-- منوی تمام‌صفحه با قابلیت هاور نارنجی -->
-    <div id="fullscreen-menu" class="fixed inset-0 z-50 bg-[#0d0d0d] opacity-0 pointer-events-none transition-opacity duration-500 flex flex-col justify-center px-6 md:px-24">
-        
-        <!-- دکمه بستن منو (ضربدر) -->
+    <!-- منوی تمام‌صفحه -->
+    <div id="fullscreen-menu" class="fixed inset-0 z-50 bg-[#0d0d0d] opacity-0 pointer-events-none transition-opacity duration-500 flex flex-col justify-center px-6 md:px-24 overflow-y-auto py-12">
         <button onclick="toggleMenu()" class="absolute top-6 left-6 rtl:right-auto rtl:left-6 ltr:right-6 ltr:left-auto text-white hover:text-brandorange transition focus:outline-none">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
             </svg>
         </button>
 
-        <!-- لینک‌های منو با هاور نارنجی غول‌پیکر -->
-        <nav class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-2 md:gap-y-4 text-5xl md:text-8xl font-black uppercase tracking-tighter leading-none">
-            <a href="#home" onclick="toggleMenu()" id="nav-home" class="hover:text-brandorange transition-colors duration-200">صفحه اصلی</a>
-            <a href="#casestudies" onclick="toggleMenu()" id="nav-cases" class="hover:text-brandorange transition-colors duration-200">مطالعات موردی</a>
-            
-            <a href="#about" onclick="toggleMenu()" id="nav-about" class="hover:text-brandorange transition-colors duration-200">درباره من</a>
-            <a href="#resume" onclick="toggleMenu()" id="nav-resume" class="hover:text-brandorange transition-colors duration-200">رزومه</a>
-            
-            <a href="#portfolio" onclick="toggleMenu()" id="nav-portfolio" class="hover:text-brandorange transition-colors duration-200">نمونه‌کارها</a>
-            <a href="#insights" onclick="toggleMenu()" id="nav-insights" class="hover:text-brandorange transition-colors duration-200">مقالات</a>
-            
-            <a href="#contact" onclick="toggleMenu()" id="nav-contact" class="hover:text-brandorange transition-colors duration-200">تماس</a>
+        <nav class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-4 text-3xl md:text-6xl font-black uppercase tracking-tighter leading-none">
+            <a href="#home" onclick="toggleMenu()" class="hover:text-brandorange transition-colors duration-200">صفحه اصلی</a>
+            <a href="#about" onclick="toggleMenu()" class="hover:text-brandorange transition-colors duration-200">درباره من</a>
+            <a href="#portfolio" onclick="toggleMenu()" class="hover:text-brandorange transition-colors duration-200">نمونه‌کارها</a>
+            <a href="#casestudies" onclick="toggleMenu()" class="hover:text-brandorange transition-colors duration-200">مطالعات موردی</a>
+            <a href="#resume" onclick="toggleMenu()" class="hover:text-brandorange transition-colors duration-200">رزومه</a>
+            <a href="#insights" onclick="toggleMenu()" class="hover:text-brandorange transition-colors duration-200">مقالات و دیدگاه‌ها</a>
+            <a href="#contact" onclick="toggleMenu()" class="hover:text-brandorange transition-colors duration-200">تماس با من</a>
         </nav>
     </div>
 
-    <!-- محتوای اصلی لندینگ پیج -->
-    <main class="space-y-32 pb-24">
+    <!-- محتوای اصلی -->
+    <main class="space-y-40 pb-24">
         
         <!-- ۱. صفحه اصلی (Home) -->
         <section id="home" class="min-h-screen flex flex-col justify-center items-start max-w-7xl mx-auto px-6 pt-32">
             <div class="space-y-6 max-w-4xl">
-                <span class="text-xs font-bold tracking-widest uppercase text-brandorange bg-brandorange/10 px-3.5 py-1.5 rounded-full border border-brandorange/20" id="hero-tag">
-                    مدیریت و توسعه برند
+                <span class="text-xs font-bold tracking-widest uppercase text-brandorange bg-brandorange/10 px-3.5 py-1.5 rounded-full border border-brandorange/20">
+                    مدیریت روابط عمومی و توسعه برند
                 </span>
-                <h1 class="text-5xl md:text-8xl font-black tracking-tighter leading-none hover:text-brandorange transition-colors duration-300" id="hero-title">
-                    آمبیژن و اصالت در مسیر توسعه.
+                <h1 class="text-5xl md:text-8xl font-black tracking-tighter leading-none hover:text-brandorange transition-colors duration-300">
+                    سید هادی هورانی
                 </h1>
-                <p class="text-lg md:text-2xl text-neutral-400 font-light max-w-2xl leading-relaxed" id="hero-desc">
-                    خلق ارزش، ارتباطات راهبردی و ساخت هویت متمایز سازمانی فراتر از استانداردهای معمولی.
+                <p class="text-xl md:text-2xl text-neutral-300 font-medium">
+                    مدیر روابط عمومی، ارتباطات راهبردی و توسعه برند
                 </p>
-                <div class="pt-6 flex gap-4">
-                    <a href="#resume" class="px-8 py-4 bg-brandorange text-white font-bold rounded-full hover:bg-orange-600 transition text-sm tracking-wide shadow-lg shadow-brandorange/20" id="cta-btn">
+                <p class="text-neutral-400 text-lg leading-relaxed max-w-2xl font-light">
+                    تبدیل ارتباطات از یک واحد اجرایی به ابزاری راهبردی برای رشد سازمان، ساخت اعتبار و مدیریت شهرت.
+                </p>
+                <div class="pt-6 flex flex-wrap gap-4">
+                    <a href="#resume" class="px-8 py-4 bg-brandorange text-white font-bold rounded-full hover:bg-orange-600 transition text-sm tracking-wide shadow-lg shadow-brandorange/20">
                         دانلود رزومه
+                    </a>
+                    <a href="#portfolio" class="px-8 py-4 bg-cardbg border border-neutral-800 text-white font-bold rounded-full hover:border-brandorange transition text-sm tracking-wide">
+                        مشاهده نمونه‌کارها
                     </a>
                 </div>
             </div>
         </section>
 
         <!-- ۲. درباره من (About) -->
-        <section id="about" class="max-w-7xl mx-auto px-6 pt-20 border-t border-neutral-900">
-            <div class="space-y-4 mb-12">
-                <h2 class="text-3xl md:text-5xl font-black tracking-tighter hover:text-brandorange transition-colors duration-200" id="sec-about-title">درباره من</h2>
-                <p class="text-neutral-400 max-w-xl" id="sec-about-sub">معرفی، سوابق شغلی، تحصیلات، مهارت‌ها و افتخارات حرفه‌ای.</p>
+        <section id="about" class="max-w-7xl mx-auto px-6 pt-20">
+            <div class="space-y-4 mb-16">
+                <h2 class="text-3xl md:text-5xl font-black tracking-tighter hover:text-brandorange transition-colors duration-200">درباره من</h2>
+                <p class="text-neutral-400 max-w-xl">معرفی، فلسفه کاری، مأموریت، ارزش‌ها و رویکرد اجرایی.</p>
             </div>
-            <div class="p-8 bg-cardbg rounded-2xl border border-neutral-800 hover:border-brandorange/50 transition-all duration-300">
-                <p class="text-neutral-300 leading-relaxed text-lg" id="ab-card1-d">سال‌ها تجربه در سطح مدیریتی و هدایت ارکان روابط عمومی و ارتباطات راهبردی. توسعه برند، مدیریت بحران، کمپین‌های رسانه‌ای و ارتباطات سازمانی.</p>
+
+            <!-- معرفی و بیوگرافی -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-20">
+                <div class="space-y-6 text-neutral-300 leading-relaxed text-base">
+                    <p class="font-semibold text-white text-lg">سلام، من سید هادی هورانی هستم.</p>
+                    <p>مدیر روابط عمومی، ارتباطات راهبردی و توسعه برند با تجربه در طراحی و اجرای پروژه‌های ارتباطی، مدیریت برند، توسعه بازار، ارتباط با رسانه‌ها و هدایت کمپین‌های سازمانی.</p>
+                    <p>باور دارم روابط عمومی زمانی ارزش‌آفرین است که بتواند میان اهداف کسب‌وکار، ذی‌نفعان، رسانه‌ها و برند سازمان ارتباطی مؤثر، پایدار و هدفمند ایجاد کند.</p>
+                    <p>امروزه نیز با بهره‌گیری از فناوری‌های نوین، هوش مصنوعی و رویکردهای داده‌محور، به دنبال طراحی راهکارهایی هستم که اعتبار برند و سرمایه ارتباطی سازمان‌ها را توسعه دهند.</p>
+                </div>
+                <div class="space-y-6 bg-cardbg p-8 rounded-3xl border border-neutral-800">
+                    <div class="space-y-2">
+                        <h3 class="text-brandorange font-bold text-lg">فلسفه کاری</h3>
+                        <p class="text-sm text-neutral-400 leading-relaxed">ارتباطات زمانی ارزشمند است که بتواند اعتماد بسازد. فرآیندی راهبردی برای ساخت اعتبار، مدیریت شهرت و ایجاد ارتباط مؤثر میان سازمان و ذی‌نفعان.</p>
+                    </div>
+                    <div class="space-y-2 pt-4 border-t border-neutral-800">
+                        <h3 class="text-brandorange font-bold text-lg">مأموریت و چشم‌انداز</h3>
+                        <p class="text-sm text-neutral-400 leading-relaxed">کمک به سازمان‌ها برای ساخت و توسعه سرمایه ارتباطی و تبدیل شدن به یکی از مدیران تأثیرگذار حوزه روابط عمومی در ایران.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- حوزه‌های تخصصی (کارت‌ها) -->
+            <div class="mb-20">
+                <h3 class="text-2xl font-bold mb-8 text-white">حوزه‌های تخصصی</h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="p-5 bg-cardbg rounded-xl border border-neutral-800 text-sm font-semibold hover:border-brandorange transition">روابط عمومی سازمانی</div>
+                    <div class="p-5 bg-cardbg rounded-xl border border-neutral-800 text-sm font-semibold hover:border-brandorange transition">ارتباطات راهبردی</div>
+                    <div class="p-5 bg-cardbg rounded-xl border border-neutral-800 text-sm font-semibold hover:border-brandorange transition">توسعه برند</div>
+                    <div class="p-5 bg-cardbg rounded-xl border border-neutral-800 text-sm font-semibold hover:border-brandorange transition">مدیریت شهرت</div>
+                    <div class="p-5 bg-cardbg rounded-xl border border-neutral-800 text-sm font-semibold hover:border-brandorange transition">ارتباط با رسانه‌ها</div>
+                    <div class="p-5 bg-cardbg rounded-xl border border-neutral-800 text-sm font-semibold hover:border-brandorange transition">توسعه بازار</div>
+                    <div class="p-5 bg-cardbg rounded-xl border border-neutral-800 text-sm font-semibold hover:border-brandorange transition">ارتباطات B2B و B2G</div>
+                    <div class="p-5 bg-cardbg rounded-xl border border-neutral-800 text-sm font-semibold hover:border-brandorange transition">مدیریت بحران</div>
+                    <div class="p-5 bg-cardbg rounded-xl border border-neutral-800 text-sm font-semibold hover:border-brandorange transition">کمپین‌های ارتباطی</div>
+                    <div class="p-5 bg-cardbg rounded-xl border border-neutral-800 text-sm font-semibold hover:border-brandorange transition">مسئولیت اجتماعی (CSR)</div>
+                    <div class="p-5 bg-cardbg rounded-xl border border-neutral-800 text-sm font-semibold hover:border-brandorange transition">ارتباطات دیجیتال</div>
+                    <div class="p-5 bg-cardbg rounded-xl border border-neutral-800 text-sm font-semibold hover:border-brandorange transition">تولید محتوا و رسانه</div>
+                </div>
+            </div>
+
+            <!-- رویکرد کاری من (۵ مرحله) -->
+            <div class="mb-20">
+                <h3 class="text-2xl font-bold mb-8 text-white">رویکرد کاری من (۵ مرحله)</h3>
+                <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
+                    <div class="p-6 bg-cardbg rounded-2xl border border-neutral-800 space-y-2">
+                        <span class="text-brandorange font-black text-xl">01</span>
+                        <h4 class="font-bold text-white">تحلیل</h4>
+                        <p class="text-xs text-neutral-400">شناخت وضعیت موجود، تحلیل محیط و بررسی رقبا.</p>
+                    </div>
+                    <div class="p-6 bg-cardbg rounded-2xl border border-neutral-800 space-y-2">
+                        <span class="text-brandorange font-black text-xl">02</span>
+                        <h4 class="font-bold text-white">طراحی استراتژی</h4>
+                        <p class="text-xs text-neutral-400">تعیین اهداف، مخاطبان، پیام‌ها و شاخص‌ها.</p>
+                    </div>
+                    <div class="p-6 bg-cardbg rounded-2xl border border-neutral-800 space-y-2">
+                        <span class="text-brandorange font-black text-xl">03</span>
+                        <h4 class="font-bold text-white">اجرا</h4>
+                        <p class="text-xs text-neutral-400">مدیریت تیم، تولید محتوا، رسانه و کمپین‌ها.</p>
+                    </div>
+                    <div class="p-6 bg-cardbg rounded-2xl border border-neutral-800 space-y-2">
+                        <span class="text-brandorange font-black text-xl">04</span>
+                        <h4 class="font-bold text-white">ارزیابی</h4>
+                        <p class="text-xs text-neutral-400">پایش عملکرد، تحلیل داده‌ها و استخراج نتایج.</p>
+                    </div>
+                    <div class="p-6 bg-cardbg rounded-2xl border border-neutral-800 space-y-2">
+                        <span class="text-brandorange font-black text-xl">05</span>
+                        <h4 class="font-bold text-white">بهبود مستمر</h4>
+                        <p class="text-xs text-neutral-400">اصلاح فرآیندها و توسعه راهکارهای جدید.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ۳. نمونه‌کارها (Portfolio) -->
+        <section id="portfolio" class="max-w-7xl mx-auto px-6 pt-20 border-t border-neutral-900">
+            <div class="space-y-4 mb-16">
+                <h2 class="text-3xl md:text-5xl font-black tracking-tighter hover:text-brandorange transition-colors duration-200">نمونه‌کارها و پروژه‌ها</h2>
+                <p class="text-neutral-400 max-w-2xl">مجموعه‌ای از پروژه‌های منتخب در حوزه روابط عمومی، توسعه برند، رویدادها، کمپین‌ها و تولید محتوا.</p>
+            </div>
+
+            <div class="space-y-16">
+                <!-- دسته اول -->
+                <div class="p-8 bg-cardbg rounded-3xl border border-neutral-800 space-y-4">
+                    <span class="text-brandorange text-xs font-mono uppercase tracking-widest">Category 01</span>
+                    <h3 class="text-2xl font-bold text-white">روابط عمومی و ارتباطات سازمانی</h3>
+                    <p class="text-sm text-neutral-400">پوشش خبری رویدادها، مدیریت ارتباط با رسانه، سخنرانی و اجرا، و ارتباطات داخلی.</p>
+                    <div class="flex flex-wrap gap-2 pt-2">
+                        <span class="px-3 py-1 bg-neutral-900 text-neutral-300 text-xs rounded-lg">نمونه خبرها و گزارش‌ها</span>
+                        <span class="px-3 py-1 bg-neutral-900 text-neutral-300 text-xs rounded-lg">مصاحبه و نشست خبری</span>
+                        <span class="px-3 py-1 bg-neutral-900 text-neutral-300 text-xs rounded-lg">همایش‌ها و کنفرانس‌ها</span>
+                        <span class="px-3 py-1 bg-neutral-900 text-neutral-300 text-xs rounded-lg">خبرنامه و روابط کارکنان</span>
+                    </div>
+                </div>
+
+                <!-- دسته دوم -->
+                <div class="p-8 bg-cardbg rounded-3xl border border-neutral-800 space-y-4">
+                    <span class="text-brandorange text-xs font-mono uppercase tracking-widest">Category 02 (Key Strength)</span>
+                    <h3 class="text-2xl font-bold text-white">توسعه برند (Brand Development)</h3>
+                    <p class="text-sm text-neutral-400">پروژه توسعه برند میراب (طراحی استراتژی، هویت ارتباطی، پیام برند و حضور رسانه‌ای)، برند کارفرمایی و مسئولیت اجتماعی.</p>
+                </div>
+
+                <!-- دسته سوم و بقیه دسته‌ها -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="p-8 bg-cardbg rounded-3xl border border-neutral-800 space-y-3">
+                        <span class="text-brandorange text-xs font-mono">Category 03</span>
+                        <h4 class="text-xl font-bold text-white">نمایشگاه‌ها و رویدادها</h4>
+                        <p class="text-xs text-neutral-400">برنامه‌ریزی، طراحی غرفه، مدیریت رسانه، تولید محتوا و عکاسی صنعتی.</p>
+                    </div>
+                    <div class="p-8 bg-cardbg rounded-3xl border border-neutral-800 space-y-3">
+                        <span class="text-brandorange text-xs font-mono">Category 04</span>
+                        <h4 class="text-xl font-bold text-white">کمپین‌های ارتباطی</h4>
+                        <p class="text-xs text-neutral-400">کمپین‌های معرفی محصول، دیجیتال، استخدام، نمایشگاهی و مسئولیت اجتماعی.</p>
+                    </div>
+                    <div class="p-8 bg-cardbg rounded-3xl border border-neutral-800 space-y-3">
+                        <span class="text-brandorange text-xs font-mono">Category 05 & 06</span>
+                        <h4 class="text-xl font-bold text-white">تولید محتوا و طراحی گرافیک</h4>
+                        <p class="text-xs text-neutral-400">مقالات، سناریو، کاتالوگ، بروشور، پوسترهای صنعتی و هویت بصری.</p>
+                    </div>
+                    <div class="p-8 bg-cardbg rounded-3xl border border-neutral-800 space-y-3">
+                        <span class="text-brandorange text-xs font-mono">Category 07, 08 & 09</span>
+                        <h4 class="text-xl font-bold text-white">رسانه، عکاسی و پروژه‌های ویژه</h4>
+                        <p class="text-xs text-neutral-400">عکاسی صنعتی، موشن‌گرافیک، شبکه‌های اجتماعی (لینکدین، اینستاگرام) و پروژه‌های ملی.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ۴. مطالعات موردی (Case Studies) -->
+        <section id="casestudies" class="max-w-7xl mx-auto px-6 pt-20 border-t border-neutral-900">
+            <div class="space-y-4 mb-12">
+                <h2 class="text-3xl md:text-5xl font-black tracking-tighter hover:text-brandorange transition-colors duration-200">مطالعات موردی</h2>
+                <p class="text-neutral-400 max-w-xl">بررسی تخصصی پروژه‌ها (هدف، چالش، راهکار، اقدامات و نتیجه).</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="p-8 bg-cardbg rounded-2xl border border-neutral-800 space-y-4">
+                    <span class="text-xs text-brandorange font-mono">CASE STUDY 01</span>
+                    <h3 class="font-bold text-2xl text-white">پروژه توسعه برند</h3>
+                    <p class="text-sm text-neutral-400 leading-relaxed">تحلیل کامل فرآیند از شناسایی چالش تا راهکارهای ارتباطی و دستیابی به نتایج مطلوب.</p>
+                </div>
+                <div class="p-8 bg-cardbg rounded-2xl border border-neutral-800 space-y-4">
+                    <span class="text-xs text-brandorange font-mono">CASE STUDY 02</span>
+                    <h3 class="font-bold text-2xl text-white">کمپین ارتباطی ملی</h3>
+                    <p class="text-sm text-neutral-400 leading-relaxed">اجرای ساختاریافته‌ی کمپین‌های روابط عمومی با تمرکز بر اثرگذاری حداکثری.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ۵. رزومه (Resume) -->
+        <section id="resume" class="max-w-7xl mx-auto px-6 pt-20 border-t border-neutral-900">
+            <div class="space-y-4 mb-12">
+                <h2 class="text-3xl md:text-5xl font-black tracking-tighter hover:text-brandorange transition-colors duration-200">رزومه</h2>
+                <p class="text-neutral-400 max-w-xl">مشاهده آنلاین و دانلود نسخه‌های فارسی و انگلیسی.</p>
+            </div>
+            <div class="flex flex-wrap gap-4">
+                <a href="#" class="px-6 py-3 bg-brandorange text-white rounded-xl text-sm font-bold shadow-lg shadow-brandorange/20 hover:bg-orange-600 transition">دانلود رزومه فارسی (PDF)</a>
+                <a href="#" class="px-6 py-3 bg-cardbg border border-neutral-800 hover:border-brandorange rounded-xl text-sm font-semibold transition">دانلود رزومه انگلیسی (PDF)</a>
+            </div>
+        </section>
+
+        <!-- ۶. مقالات و دیدگاه‌ها (Insights) -->
+        <section id="insights" class="max-w-7xl mx-auto px-6 pt-20 border-t border-neutral-900">
+            <div class="space-y-4 mb-12">
+                <h2 class="text-3xl md:text-5xl font-black tracking-tighter hover:text-brandorange transition-colors duration-200">مقالات و دیدگاه‌ها</h2>
+                <p class="text-neutral-400 max-w-xl">یادداشت‌ها، تحلیل‌ها و اخبار تخصصی حوزه ارتباطات.</p>
+            </div>
+            <div class="p-8 bg-cardbg rounded-2xl border border-neutral-800 space-y-3">
+                <span class="text-xs text-brandorange font-mono">INSIGHTS</span>
+                <h3 class="font-bold text-xl text-white">آینده روابط عمومی در فضای کسب‌وکار مدرن</h3>
+                <p class="text-sm text-neutral-400">نگاهی به تغییرات ساختاری در ارتباطات راهبردی و مدیریت برندهای پیشرو.</p>
             </div>
         </section>
 
         <!-- ۷. تماس با من (Contact) -->
         <section id="contact" class="max-w-7xl mx-auto px-6 pt-20 border-t border-neutral-900">
             <div class="space-y-4 mb-12">
-                <h2 class="text-3xl md:text-5xl font-black tracking-tighter hover:text-brandorange transition-colors duration-200" id="sec-con-title">تماس با من</h2>
-                <p class="text-neutral-400 max-w-xl" id="sec-con-sub">اطلاعات تماس، فرم ارتباط و شبکه‌های اجتماعی.</p>
+                <h2 class="text-3xl md:text-5xl font-black tracking-tighter hover:text-brandorange transition-colors duration-200">تماس با من</h2>
+                <p class="text-neutral-400 max-w-xl">اطلاعات تماس، فرم ارتباط و شبکه‌های اجتماعی.</p>
             </div>
-            <div class="bg-cardbg p-8 rounded-2xl border border-neutral-800 space-y-4 max-w-2xl">
-                <input type="text" placeholder="نام شما" class="w-full bg-neutral-900 border border-neutral-800 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brandorange transition-colors" id="form-name">
-                <input type="email" placeholder="ایمیل یا شماره تماس" class="w-full bg-neutral-900 border border-neutral-800 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brandorange transition-colors" id="form-email">
-                <textarea placeholder="متن پیام..." rows="4" class="w-full bg-neutral-900 border border-neutral-800 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brandorange transition-colors" id="form-msg"></textarea>
-                <button class="w-full py-3 bg-brandorange text-white font-bold rounded-xl hover:bg-orange-600 transition text-sm shadow-lg shadow-brandorange/20" id="form-btn">ارسال پیام</button>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="space-y-6">
+                    <p class="text-neutral-300 leading-relaxed">جهت مشاوره، پروژه‌های همکاری و ارتباط مستقیم می‌توانید از طریق راه‌های زیر اقدام نمایید.</p>
+                    <div class="flex gap-4">
+                        <a href="https://linkedin.com" target="_blank" class="px-6 py-3 bg-cardbg border border-neutral-800 rounded-xl text-sm font-semibold hover:border-brandorange hover:text-brandorange transition">LinkedIn</a>
+                        <a href="https://instagram.com" target="_blank" class="px-6 py-3 bg-cardbg border border-neutral-800 rounded-xl text-sm font-semibold hover:border-brandorange hover:text-brandorange transition">Instagram</a>
+                    </div>
+                </div>
+                <div class="bg-cardbg p-8 rounded-3xl border border-neutral-800 space-y-4">
+                    <input type="text" placeholder="نام شما" class="w-full bg-neutral-900 border border-neutral-800 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brandorange transition-colors text-white">
+                    <input type="email" placeholder="ایمیل یا شماره تماس" class="w-full bg-neutral-900 border border-neutral-800 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brandorange transition-colors text-white">
+                    <textarea placeholder="متن پیام..." rows="4" class="w-full bg-neutral-900 border border-neutral-800 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-brandorange transition-colors text-white"></textarea>
+                    <button class="w-full py-3 bg-brandorange text-white font-bold rounded-xl hover:bg-orange-600 transition text-sm shadow-lg shadow-brandorange/20">ارسال پیام</button>
+                </div>
             </div>
         </section>
 
     </main>
+
+    <!-- فوتر -->
+    <footer class="max-w-7xl mx-auto px-6 py-12 border-t border-neutral-900 text-center text-xs text-neutral-500">
+        &copy; 2026 سید هادی هورانی. All rights reserved.
+    </footer>
 
     <!-- اسکریپت‌ها -->
     <script>
         function toggleMenu() {
             const menu = document.getElementById('fullscreen-menu');
             const body = document.body;
-            
             if (menu.classList.contains('opacity-0')) {
                 menu.classList.remove('opacity-0', 'pointer-events-none');
                 body.classList.add('overflow-hidden');
@@ -138,68 +315,11 @@
         }
 
         let currentLang = 'fa';
-        const data = {
-            fa: {
-                title: "هادی هورانی | روابط عمومی و توسعه برند",
-                navHome: "صفحه اصلی", navAbout: "درباره من", navPort: "نمونه‌کارها", navCases: "مطالعات موردی", navRes: "رزومه", navIns: "مقالات", navCon: "تماس",
-                tag: "مدیریت و توسعه برند",
-                heroTitle: "آمبیژن و اصالت در مسیر توسعه.",
-                heroDesc: "خلق ارزش، ارتباطات راهبردی و ساخت هویت متمایز سازمانی فراتر از استانداردهای معمولی.",
-                cta: "دانلود رزومه",
-                secAboutT: "درباره من", secAboutSub: "معرفی، سوابق شغلی، تحصیلات، مهارت‌ها و افتخارات حرفه‌ای.",
-                ab1d: "سال‌ها تجربه در سطح مدیریتی و هدایت ارکان روابط عمومی و ارتباطات راهبردی. توسعه برند، مدیریت بحران، کمپین‌های رسانه‌ای و ارتباطات سازمانی.",
-                secConT: "تماس با من", secConSub: "اطلاعات تماس، فرم ارتباط و شبکه‌های اجتماعی.",
-                fName: "نام شما", fEmail: "ایمیل یا شماره تماس", fMsg: "متن پیام...", fBtn: "ارسال پیام",
-                btn: "English",
-                dir: "rtl"
-            },
-            en: {
-                title: "Hadi Hourani | PR & Brand Development",
-                navHome: "HOME", navAbout: "ABOUT", navPort: "PORTFOLIO", navCases: "CASES", navRes: "RESUME", navIns: "INSIGHTS", navCon: "CONTACT",
-                tag: "Brand Management & Development",
-                heroTitle: "AMBITION & AUTHENTICITY.",
-                heroDesc: "Creating value, strategic communications, and building a distinctive corporate identity beyond ordinary standards.",
-                cta: "DOWNLOAD RESUME",
-                secAboutT: "ABOUT ME", secAboutSub: "Introduction, career history, education, skills, and professional honors.",
-                ab1d: "Years of experience at the managerial level guiding PR and strategic communications. Brand development, crisis management, media campaigns, and corporate communications.",
-                secConT: "CONTACT ME", secConSub: "Contact info, contact form, and social links.",
-                fName: "Your Name", fEmail: "Email or Phone", fMsg: "Your Message...", fBtn: "Send Message",
-                btn: "فارسی",
-                dir: "ltr"
-            }
-        };
-
         function toggleLang() {
             currentLang = currentLang === 'fa' ? 'en' : 'fa';
-            const d = data[currentLang];
-            document.getElementById('html-root').setAttribute('dir', d.dir);
-            document.getElementById('page-title').innerText = d.title;
-            
-            document.getElementById('nav-home').innerText = d.navHome;
-            document.getElementById('nav-about').innerText = d.navAbout;
-            document.getElementById('nav-portfolio').innerText = d.navPort;
-            document.getElementById('nav-cases').innerText = d.navCases;
-            document.getElementById('nav-resume').innerText = d.navRes;
-            document.getElementById('nav-insights').innerText = d.navIns;
-            document.getElementById('nav-contact').innerText = d.navCon;
-
-            document.getElementById('hero-tag').innerText = d.tag;
-            document.getElementById('hero-title').innerText = d.heroTitle;
-            document.getElementById('hero-desc').innerText = d.heroDesc;
-            document.getElementById('cta-btn').innerText = d.cta;
-            
-            document.getElementById('sec-about-title').innerText = d.secAboutT;
-            document.getElementById('sec-about-sub').innerText = d.secAboutSub;
-            document.getElementById('ab-card1-d').innerText = d.ab1d;
-
-            document.getElementById('sec-con-title').innerText = d.secConT;
-            document.getElementById('sec-con-sub').innerText = d.secConSub;
-            document.getElementById('form-name').placeholder = d.fName;
-            document.getElementById('form-email').placeholder = d.fEmail;
-            document.getElementById('form-msg').placeholder = d.fMsg;
-            document.getElementById('form-btn').innerText = d.fBtn;
-
-            document.getElementById('lang-btn').innerText = d.btn;
+            document.getElementById('lang-btn').innerText = currentLang === 'fa' ? 'English' : 'فارسی';
+            document.getElementById('html-root').setAttribute('dir', currentLang === 'fa' ? 'rtl' : 'ltr');
+            document.getElementById('page-title').innerText = currentLang === 'fa' ? 'سید هادی هورانی | روابط عمومی و توسعه برند' : 'Seyed Hadi Hourani | PR & Brand Development';
         }
     </script>
 </body>
