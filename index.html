@@ -92,27 +92,24 @@
             </div>
         </section>
 
-        <!-- ۲. درباره من (About) - با قابلیت پس‌زمینه عکس در سمت چپ و متن در راست -->
-        <section id="about" class="relative pt-20 overflow-hidden">
-            <!-- کانتینر اصلی که عکس در سمت چپِ آن به لبه چسبیده است -->
-            <div class="relative max-w-7xl mx-auto px-6 min-h-[700px] flex items-center">
+        <!-- ۲. درباره من (About) - چیدمان دقیق چسبیده به لبه چپ بدون هم‌پوشانی -->
+        <section id="about" class="pt-20 overflow-hidden">
+            <!-- کانتینر اصلی بخش درباره من -->
+            <div class="w-full flex flex-col md:flex-row items-stretch min-h-[650px]">
                 
-                <!-- عکس به عنوان پس‌زمینه/بخش چپ که کاملاً به لبه چپ صفحه چسبیده است -->
-                <div class="absolute inset-y-0 left-0 w-full md:w-1/2 z-0 overflow-hidden">
-                    <img src="hadi.jpg" alt="سید هادی هورانی" class="w-full h-full object-cover object-left opacity-90">
-                    <!-- گرادینت برای محو شدن لبه عکس در تاریکی پس‌زمینه -->
-                    <div class="absolute inset-0 bg-gradient-to-r from-transparent via-darkbg/60 to-darkbg md:block hidden"></div>
-                    <div class="absolute inset-0 bg-darkbg/40 md:hidden"></div>
+                <!-- سمت چپ: عکس کاملاً چسبیده به لبه چپ صفحه -->
+                <div class="w-full md:w-1/2 relative min-h-[400px] md:min-h-full">
+                    <img src="hadi.jpg" alt="سید هادی هورانی" class="absolute inset-0 w-full h-full object-cover object-left">
                 </div>
 
-                <!-- محتوای متنی که در سمت راست قرار دارد -->
-                <div class="relative z-10 w-full md:w-7/12 ml-auto py-12 space-y-8">
+                <!-- سمت راست: متن‌ها در یک کادر و پدینگ استاندارد -->
+                <div class="w-full md:w-1/2 flex flex-col justify-center px-8 md:px-16 py-16 space-y-8 bg-darkbg">
                     <div class="space-y-4">
                         <h2 class="text-3xl md:text-5xl font-black tracking-tighter hover:text-brandorange transition-colors duration-200">درباره من</h2>
                         <p class="text-neutral-400">معرفی، فلسفه کاری، مأموریت، ارزش‌ها و رویکرد اجرایی.</p>
                     </div>
 
-                    <div class="space-y-6 text-neutral-300 leading-relaxed text-base bg-darkbg/80 md:bg-transparent p-6 md:p-0 rounded-2xl backdrop-blur-sm">
+                    <div class="space-y-6 text-neutral-300 leading-relaxed text-base">
                         <p class="font-semibold text-white text-lg">سلام، من سید هادی هورانی هستم.</p>
                         <p>مدیر روابط عمومی، ارتباطات راهبردی و توسعه برند با تجربه در طراحی و اجرای پروژه‌های ارتباطی، مدیریت برند، توسعه بازار، ارتباط با رسانه‌ها و هدایت کمپین‌های سازمانی.</p>
                         <p>باور دارم روابط عمومی زمانی ارزش‌آفرین است که بتواند میان اهداف کسب‌وکار، ذی‌نفعان، رسانه‌ها و برند سازمان ارتباطی مؤثر، پایدار و هدفمند ایجاد کند.</p>
@@ -122,8 +119,9 @@
 
             </div>
 
-            <!-- فلسفه کاری و مأموریت -->
-            <div class="max-w-7xl mx-auto px-6 mt-12">
+            <!-- بقیه بخش‌های درباره من (فلسفه کاری، حوزه‌ها و...) داخل کانتینر استاندارد -->
+            <div class="max-w-7xl mx-auto px-6 mt-20">
+                <!-- فلسفه کاری و مأموریت -->
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-20">
                     <div class="space-y-6 bg-cardbg p-8 rounded-3xl border border-neutral-800">
                         <div class="space-y-2">
