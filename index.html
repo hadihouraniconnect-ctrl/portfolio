@@ -92,18 +92,18 @@
             </div>
         </section>
 
-        <!-- ۲. درباره من (About) - چیدمان دقیق چسبیده به لبه چپ بدون هم‌پوشانی -->
+        <!-- ۲. درباره من (About) - عکس دقیقاً چسبیده به لبه چپ و متن در سمت راست -->
         <section id="about" class="pt-20 overflow-hidden">
-            <!-- کانتینر اصلی بخش درباره من -->
-            <div class="w-full flex flex-col md:flex-row items-stretch min-h-[650px]">
+            <!-- استفاده از dir="ltr" در این بخش خاص برای تضمین قرارگیری عکس در چپ و متن در راست -->
+            <div class="w-full flex flex-col md:flex-row items-stretch min-h-[650px]" dir="ltr">
                 
                 <!-- سمت چپ: عکس کاملاً چسبیده به لبه چپ صفحه -->
-                <div class="w-full md:w-1/2 relative min-h-[400px] md:min-h-full">
+                <div class="w-full md:w-1/2 relative min-h-[450px] md:min-h-full">
                     <img src="hadi.jpg" alt="سید هادی هورانی" class="absolute inset-0 w-full h-full object-cover object-left">
                 </div>
 
-                <!-- سمت راست: متن‌ها در یک کادر و پدینگ استاندارد -->
-                <div class="w-full md:w-1/2 flex flex-col justify-center px-8 md:px-16 py-16 space-y-8 bg-darkbg">
+                <!-- سمت راست: متن‌ها با چیدمان راست‌چین داخلی (dir="rtl") -->
+                <div class="w-full md:w-1/2 flex flex-col justify-center px-8 md:px-16 py-16 space-y-8 bg-darkbg" dir="rtl">
                     <div class="space-y-4">
                         <h2 class="text-3xl md:text-5xl font-black tracking-tighter hover:text-brandorange transition-colors duration-200">درباره من</h2>
                         <p class="text-neutral-400">معرفی، فلسفه کاری، مأموریت، ارزش‌ها و رویکرد اجرایی.</p>
